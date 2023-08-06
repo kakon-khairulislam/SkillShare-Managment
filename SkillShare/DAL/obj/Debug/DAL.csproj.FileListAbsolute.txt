@@ -1,0 +1,12 @@
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\bin\Debug\DAL.dll.config
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\bin\Debug\DAL.dll
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\bin\Debug\DAL.pdb
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\bin\Debug\EntityFramework.dll
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\bin\Debug\EntityFramework.SqlServer.dll
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\bin\Debug\EntityFramework.xml
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\bin\Debug\EntityFramework.SqlServer.xml
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.csproj.CopyComplete
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.dll
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.pdb
