@@ -1,4 +1,4 @@
-﻿using DAL.EF.Model;
+﻿using DAL.EF.Models;
 using DAL.Interface;
 using DAL.Repos;
 using System;

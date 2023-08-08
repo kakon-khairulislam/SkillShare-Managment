@@ -1,4 +1,4 @@
-﻿using DAL.EF.Model;
+﻿using DAL.EF.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,6 @@ namespace DAL.Interface
 {
     public interface IAuth
     {
-        User Auth(string name, string password);
+        //User Auth(string name, string password);
     }
 }
