@@ -17,7 +17,13 @@ namespace DAL.EF
         public DbSet<Course> Courses { get; set; }
         public DbSet<CourseChapter> CourseChapters { get; set; }
         public DbSet<CourseChapterAndStudent> CourseChapterAndStudents { get; set; }
+        public DbSet<CourseExam> CourseExams { get; set; }
+        public DbSet<CourseExamAndStudent> CourseExamsAndStudents { get; set; }
+        public DbSet<CourseFeedback> CourseFeedbacks { get; set; }
         public DbSet<CourseSection> CourseSections { get; set; }
         public DbSet<CourseSectionAndStudent> CourseSectionAndStudents { get; set; }
+        public DbSet<CourseSectionAssignment> CourseSectionAssignments { get; set; }
+        public DbSet<CourseSectionAssignmentAndStudent> CourseSectionAssignmentAndStudents { get; set; }
+        public DbSet<CourseSectionAndStudentGroup> CourseSectionAndStudentGroups { get; set; }
     }
 }

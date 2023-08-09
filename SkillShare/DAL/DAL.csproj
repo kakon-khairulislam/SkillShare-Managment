@@ -52,8 +52,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessFactory.cs" />
+    <Compile Include="EF\Models\CourseExam.cs" />
+    <Compile Include="EF\Models\CourseExamAndStudent.cs" />
+    <Compile Include="EF\Models\CourseSectionAndStudentGroup.cs" />
+    <Compile Include="EF\Models\CourseSectionAssignment.cs" />
+    <Compile Include="EF\Models\CourseSectionAssignmentAndStudent.cs" />
     <Compile Include="EF\Models\CourseChapter.cs" />
     <Compile Include="EF\Models\CourseChapterAndStudent.cs" />
+    <Compile Include="EF\Models\CourseFeedback.cs" />
     <Compile Include="EF\Models\CourseSection.cs" />
     <Compile Include="EF\Models\Course.cs" />
     <Compile Include="EF\Models\CourseSectionAndStudent.cs" />
@@ -66,6 +72,14 @@
     <Compile Include="Migrations\202308081824569_CreateStudentCourseRelatedTables.cs" />
     <Compile Include="Migrations\202308081824569_CreateStudentCourseRelatedTables.designer.cs">
       <DependentUpon>202308081824569_CreateStudentCourseRelatedTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308091637246_CreatedMoreCourseExamAssignmentFeedback.cs" />
+    <Compile Include="Migrations\202308091637246_CreatedMoreCourseExamAssignmentFeedback.designer.cs">
+      <DependentUpon>202308091637246_CreatedMoreCourseExamAssignmentFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308091707109_AddedCourseSectionAndStudentGroup.cs" />
+    <Compile Include="Migrations\202308091707109_AddedCourseSectionAndStudentGroup.designer.cs">
+      <DependentUpon>202308091707109_AddedCourseSectionAndStudentGroup.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
@@ -100,6 +114,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202308081824569_CreateStudentCourseRelatedTables.resx">
       <DependentUpon>202308081824569_CreateStudentCourseRelatedTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308091637246_CreatedMoreCourseExamAssignmentFeedback.resx">
+      <DependentUpon>202308091637246_CreatedMoreCourseExamAssignmentFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308091707109_AddedCourseSectionAndStudentGroup.resx">
+      <DependentUpon>202308091707109_AddedCourseSectionAndStudentGroup.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

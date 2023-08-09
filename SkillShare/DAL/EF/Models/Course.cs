@@ -28,10 +28,14 @@ namespace DAL.EF.Models
 
         public virtual ICollection<CourseSection> CourseSections { get; set;}
         public virtual ICollection<CourseChapter> CourseChapters { get; set;}
+        public virtual ICollection<CourseFeedback> CourseFeedbacks { get; set;}
+        public virtual ICollection<CourseExam> CourseExams { get; set;}
         public Course()
         {
             CourseSections = new List<CourseSection>();
             CourseChapters = new List<CourseChapter>();
+            CourseFeedbacks = new List<CourseFeedback>();
+            CourseExams = new List<CourseExam>();
         }
     }
 }

@@ -20,16 +20,15 @@ namespace DAL.EF.Models
         public string GroupStatus { get; set;}
         [Required]
         public DateTime GroupCreationDate { get; set; } = DateTime.Now;
-        [ForeignKey("CourseSection")]
-        public int CourseSectionId { get; set; }
 
 
         public virtual ICollection<StudentAndStudentGroup> StudentAndStudentGroups { get; set; }
-        public virtual CourseSection CourseSection { get; set; }
+        public virtual ICollection<CourseSectionAndStudentGroup> CourseSectionAndStudentGroups { get; set; }
 
         public StudentGroup()
         {
             StudentAndStudentGroups = new List<StudentAndStudentGroup>();
+            CourseSectionAndStudentGroups = new List<CourseSectionAndStudentGroup>();
         }
     }
 }

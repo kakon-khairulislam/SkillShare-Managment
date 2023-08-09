@@ -22,3 +22,5 @@ H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\bin\Debug\EntityFramework
 H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.csproj.CopyComplete
 H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.CreateStudentCourseRelatedTables.resources
 H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.CreatedMoreCourseExamAssignmentFeedback.resources
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.AddedCourseSectionAndStudentGroup.resources
