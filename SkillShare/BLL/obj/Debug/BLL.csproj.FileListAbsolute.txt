@@ -12,3 +12,17 @@ H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\obj\Debug\BLL.dll
 H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\obj\Debug\BLL.pdb
 H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\bin\Debug\EntityFramework.dll
 H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\bin\Debug\EntityFramework.xml
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\BLL\bin\Debug\BLL.dll
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\BLL\bin\Debug\BLL.pdb
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\BLL\bin\Debug\AutoMapper.dll
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\BLL\bin\Debug\DAL.dll
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\BLL\bin\Debug\EntityFramework.dll
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\BLL\bin\Debug\DAL.pdb
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\BLL\bin\Debug\DAL.dll.config
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\BLL\bin\Debug\AutoMapper.xml
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\BLL\bin\Debug\EntityFramework.xml
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\BLL\obj\Debug\BLL.csproj.CopyComplete
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\BLL\obj\Debug\BLL.dll
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\BLL\obj\Debug\BLL.pdb
