@@ -51,12 +51,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DataAccessFactory.cs" />
+    <Compile Include="EF\Models\CourseExam.cs" />
+    <Compile Include="EF\Models\CourseExamAndStudent.cs" />
+    <Compile Include="EF\Models\CourseSectionAndStudentGroup.cs" />
+    <Compile Include="EF\Models\CourseSectionAssignment.cs" />
+    <Compile Include="EF\Models\CourseSectionAssignmentAndStudent.cs" />
+    <Compile Include="EF\Models\CourseChapter.cs" />
+    <Compile Include="EF\Models\CourseChapterAndStudent.cs" />
+    <Compile Include="EF\Models\CourseFeedback.cs" />
+    <Compile Include="EF\Models\CourseSection.cs" />
+    <Compile Include="EF\Models\Course.cs" />
+    <Compile Include="EF\Models\CourseSectionAndStudent.cs" />
+    <Compile Include="EF\Models\Student.cs" />
+    <Compile Include="EF\Models\StudentAndStudentGroup.cs" />
+    <Compile Include="EF\Models\StudentGroup.cs" />
+    <Compile Include="EF\SkillShareContext.cs" />
+    <Compile Include="Interface\IAuth.cs" />
+    <Compile Include="Interface\IRepo.cs" />
+    <Compile Include="Migrations\202308081824569_CreateStudentCourseRelatedTables.cs" />
+    <Compile Include="Migrations\202308081824569_CreateStudentCourseRelatedTables.designer.cs">
+      <DependentUpon>202308081824569_CreateStudentCourseRelatedTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308091637246_CreatedMoreCourseExamAssignmentFeedback.cs" />
+    <Compile Include="Migrations\202308091637246_CreatedMoreCourseExamAssignmentFeedback.designer.cs">
+      <DependentUpon>202308091637246_CreatedMoreCourseExamAssignmentFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308091707109_AddedCourseSectionAndStudentGroup.cs" />
+    <Compile Include="Migrations\202308091707109_AddedCourseSectionAndStudentGroup.designer.cs">
+      <DependentUpon>202308091707109_AddedCourseSectionAndStudentGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\Repo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="bin\Debug\DAL.dll.config" />
+    <None Include="obj\Debug\DAL.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\DAL.csproj.CopyComplete" />
+    <None Include="obj\Debug\DAL.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\DAL.dll" />
+    <Content Include="bin\Debug\DAL.pdb" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="obj\Debug\DAL.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\DAL.dll" />
+    <Content Include="obj\Debug\DAL.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202308081824569_CreateStudentCourseRelatedTables.resx">
+      <DependentUpon>202308081824569_CreateStudentCourseRelatedTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308091637246_CreatedMoreCourseExamAssignmentFeedback.resx">
+      <DependentUpon>202308091637246_CreatedMoreCourseExamAssignmentFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308091707109_AddedCourseSectionAndStudentGroup.resx">
+      <DependentUpon>202308091707109_AddedCourseSectionAndStudentGroup.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
