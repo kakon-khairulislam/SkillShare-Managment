@@ -17,9 +17,15 @@ namespace DAL.EF.Models
         [Required]
         public string CourseDescription { get; set; }
         [Required]
+        public string Difficulty { get; set; }
+        [Required]
+        public string Tag { get; set; }
+        [Required]
         public string CourseStartDate { get; set; }
         [Required]
         public string CourseFinishDate { get; set; }
+        [Required]
+        public string CourseStauts { get; set; } = "Enable";
 
         //Mohit Tutor entity banaila ekhana emon reference hoba
         //[ForeignKey("Tutor")] public int TutorId { get; set; }

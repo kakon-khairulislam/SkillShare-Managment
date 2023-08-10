@@ -17,9 +17,9 @@ namespace DAL.EF.Models
         [Required]
         public string AllStudentStatus { get; set; }
         [Required]
-        public string GroupStatus { get; set;}
+        public string GroupStatus { get; set; } = "Enable";
         [Required]
-        public DateTime GroupCreationDate { get; set; } = DateTime.Now;
+        public DateTime GroupCreationDate { get; set; } = DateTime.Now.Date;
 
 
         public virtual ICollection<StudentAndStudentGroup> StudentAndStudentGroups { get; set; }

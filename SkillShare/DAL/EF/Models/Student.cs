@@ -24,7 +24,7 @@ namespace DAL.EF.Models
         [Required]
         public string StudentAccountStatus { get; set; }
         [Required]
-        public DateTime RegistrationDate { get; set; } = DateTime.Now;
+        public DateTime RegistrationDate { get; set; } = DateTime.Now.Date;
 
 
         public virtual ICollection<StudentAndStudentGroup> StudentAndStudentGroups { get; set; }

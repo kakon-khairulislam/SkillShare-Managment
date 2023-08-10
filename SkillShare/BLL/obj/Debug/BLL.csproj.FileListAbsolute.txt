@@ -11,4 +11,3 @@ H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\obj\Debug\BLL.csproj.Copy
 H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\obj\Debug\BLL.dll
 H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\obj\Debug\BLL.pdb
 H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\bin\Debug\EntityFramework.dll
-H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\bin\Debug\EntityFramework.xml

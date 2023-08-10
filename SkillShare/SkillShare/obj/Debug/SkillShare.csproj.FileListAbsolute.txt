@@ -32,7 +32,6 @@ H:\A Clone Project\SkillShare-Managment\SkillShare\SkillShare\bin\roslyn\System.
 H:\A Clone Project\SkillShare-Managment\SkillShare\SkillShare\bin\roslyn\System.IO.Compression.ZipFile.dll
 H:\A Clone Project\SkillShare-Managment\SkillShare\SkillShare\bin\roslyn\System.IO.FileSystem.dll
 H:\A Clone Project\SkillShare-Managment\SkillShare\SkillShare\bin\roslyn\System.IO.FileSystem.Primitives.dll
-H:\A Clone Project\SkillShare-Managment\SkillShare\SkillShare\bin\roslyn\System.Net.Http.dll
 H:\A Clone Project\SkillShare-Managment\SkillShare\SkillShare\bin\roslyn\System.Net.Sockets.dll
 H:\A Clone Project\SkillShare-Managment\SkillShare\SkillShare\bin\roslyn\System.Reflection.Metadata.dll
 H:\A Clone Project\SkillShare-Managment\SkillShare\SkillShare\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
@@ -57,3 +56,8 @@ H:\A Clone Project\SkillShare-Managment\SkillShare\SkillShare\bin\BLL.pdb
 H:\A Clone Project\SkillShare-Managment\SkillShare\SkillShare\obj\Debug\SkillShare.csproj.CopyComplete
 H:\A Clone Project\SkillShare-Managment\SkillShare\SkillShare\obj\Debug\SkillShare.dll
 H:\A Clone Project\SkillShare-Managment\SkillShare\SkillShare\obj\Debug\SkillShare.pdb
+H:\A Clone Project\SkillShare-Managment\SkillShare\SkillShare\bin\AutoMapper.dll
+H:\A Clone Project\SkillShare-Managment\SkillShare\SkillShare\bin\DAL.dll
+H:\A Clone Project\SkillShare-Managment\SkillShare\SkillShare\bin\AutoMapper.xml
+H:\A Clone Project\SkillShare-Managment\SkillShare\SkillShare\bin\DAL.pdb
+H:\A Clone Project\SkillShare-Managment\SkillShare\SkillShare\bin\DAL.dll.config
