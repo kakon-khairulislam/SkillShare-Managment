@@ -24,3 +24,4 @@ H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.
 H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.AddedCourseSectionAndStudentGroup.resources
 A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.InitDBIns.resources
 A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.initIns.resources
