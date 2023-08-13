@@ -21,10 +21,6 @@ namespace DAL.EF.Models
         [Required]
         public string CourseFinishDate { get; set; }
 
-        //Mohit Tutor entity banaila ekhana emon reference hoba
-        //[ForeignKey("Tutor")] public int TutorId { get; set; }
-        //public virtual Tutor Tutor { get; set; }
-
         [ForeignKey("Instructor")] 
         public int InstructorId { get; set; }
         public virtual Instructor Instructor { get; set; }

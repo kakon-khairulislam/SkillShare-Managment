@@ -61,5 +61,16 @@ namespace BLL.Services
             var insDTO = mapper.Map<List<InstructorDTO>>(data);
             return insDTO;
         }
+        /*public static List<InstructorDTO> GetALLInsByCourse(int id)
+        {
+            var data = DataAccessFactory.InstructorDataAccess().GetALL().Where(x => x.CourseId == id).ToList();
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Instructor, InstructorDTO>();
+            });
+            var mapper = new Mapper(config);
+            var insDTO = mapper.Map<List<InstructorDTO>>(data);
+            return insDTO;
+        }*/
     }
 }

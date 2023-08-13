@@ -15,5 +15,9 @@ namespace DAL
         {
             return new InstructorRepo();
         }
+        public static IRepo<Course, int, bool> CourseDataAccess()
+        {
+            return new CourseRepo();
+        }
     }
 }
