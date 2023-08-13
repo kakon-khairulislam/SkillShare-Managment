@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +23,9 @@ namespace DAL.EF.Models
 
 
         public virtual Course Course { get; set; }
+        [ForeignKey("Instructor")]
+        public int InstructorId { get; set; }
+        public virtual Instructor Instructor { get; set; }
         public virtual ICollection<CourseSectionAndStudent> CourseSectionAndStudents { get; set; }
         public virtual ICollection<CourseSectionAssignment> CourseAssignments { get; set; }
         public virtual ICollection<CourseSectionAndStudentGroup> CourseSectionAndStudentGroups { get; set; }

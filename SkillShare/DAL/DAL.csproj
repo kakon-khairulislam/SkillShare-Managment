@@ -52,38 +52,40 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAccessFactory.cs" />
+    <Compile Include="EF\Models\Admin.cs" />
     <Compile Include="EF\Models\CourseExam.cs" />
     <Compile Include="EF\Models\CourseExamAndStudent.cs" />
+    <Compile Include="EF\Models\CourseSection.cs" />
     <Compile Include="EF\Models\CourseSectionAndStudentGroup.cs" />
     <Compile Include="EF\Models\CourseSectionAssignment.cs" />
     <Compile Include="EF\Models\CourseSectionAssignmentAndStudent.cs" />
     <Compile Include="EF\Models\CourseChapter.cs" />
     <Compile Include="EF\Models\CourseChapterAndStudent.cs" />
     <Compile Include="EF\Models\CourseFeedback.cs" />
-    <Compile Include="EF\Models\CourseSection.cs" />
     <Compile Include="EF\Models\Course.cs" />
     <Compile Include="EF\Models\CourseSectionAndStudent.cs" />
+    <Compile Include="EF\Models\Instructor.cs" />
+    <Compile Include="EF\Models\LocalUser.cs" />
     <Compile Include="EF\Models\Student.cs" />
     <Compile Include="EF\Models\StudentAndStudentGroup.cs" />
     <Compile Include="EF\Models\StudentGroup.cs" />
     <Compile Include="EF\SkillShareContext.cs" />
     <Compile Include="Interface\IAuth.cs" />
     <Compile Include="Interface\IRepo.cs" />
-    <Compile Include="Migrations\202308081824569_CreateStudentCourseRelatedTables.cs" />
-    <Compile Include="Migrations\202308081824569_CreateStudentCourseRelatedTables.designer.cs">
-      <DependentUpon>202308081824569_CreateStudentCourseRelatedTables.cs</DependentUpon>
+    <Compile Include="Migrations\202308100622573_InitDBIns.cs" />
+    <Compile Include="Migrations\202308100622573_InitDBIns.designer.cs">
+      <DependentUpon>202308100622573_InitDBIns.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202308091637246_CreatedMoreCourseExamAssignmentFeedback.cs" />
-    <Compile Include="Migrations\202308091637246_CreatedMoreCourseExamAssignmentFeedback.designer.cs">
-      <DependentUpon>202308091637246_CreatedMoreCourseExamAssignmentFeedback.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202308091707109_AddedCourseSectionAndStudentGroup.cs" />
-    <Compile Include="Migrations\202308091707109_AddedCourseSectionAndStudentGroup.designer.cs">
-      <DependentUpon>202308091707109_AddedCourseSectionAndStudentGroup.cs</DependentUpon>
+    <Compile Include="Migrations\202308121712325_initIns.cs" />
+    <Compile Include="Migrations\202308121712325_initIns.designer.cs">
+      <DependentUpon>202308121712325_initIns.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repos\AdminRepo.cs" />
+    <Compile Include="Repos\CourseRepo.cs" />
+    <Compile Include="Repos\InstructorRepo.cs" />
     <Compile Include="Repos\Repo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -112,14 +114,11 @@
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202308081824569_CreateStudentCourseRelatedTables.resx">
-      <DependentUpon>202308081824569_CreateStudentCourseRelatedTables.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202308100622573_InitDBIns.resx">
+      <DependentUpon>202308100622573_InitDBIns.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202308091637246_CreatedMoreCourseExamAssignmentFeedback.resx">
-      <DependentUpon>202308091637246_CreatedMoreCourseExamAssignmentFeedback.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202308091707109_AddedCourseSectionAndStudentGroup.resx">
-      <DependentUpon>202308091707109_AddedCourseSectionAndStudentGroup.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202308121712325_initIns.resx">
+      <DependentUpon>202308121712325_initIns.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

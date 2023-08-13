@@ -11,6 +11,17 @@ namespace DAL
 {
     public class DataAccessFactory
     {
-        
+        public static IRepo<Instructor, int, bool> InstructorDataAccess()
+        {
+            return new InstructorRepo();
+        }
+        public static IRepo<Course, int, bool> CourseDataAccess()
+        {
+            return new CourseRepo();
+        }
+        public static IRepo<Admin, int , bool> AdminDataAccess()
+        {
+            return new AdminRepo();
+        }
     }
 }
