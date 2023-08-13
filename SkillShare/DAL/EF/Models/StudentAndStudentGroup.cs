@@ -17,7 +17,7 @@ namespace DAL.EF.Models
         [ForeignKey("StudentGroup")]
         public int StudentGroupId { get; set; }
 
-        public Student Student { get; set; }
-        public StudentGroup StudentGroup { get; set; }
+        public virtual Student Student { get; set; }
+        public virtual StudentGroup StudentGroup { get; set; }
     }
 }
