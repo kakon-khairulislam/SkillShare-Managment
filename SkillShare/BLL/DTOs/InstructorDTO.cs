@@ -17,12 +17,5 @@ namespace BLL.DTOs
         public string InstructorStatus { get; set; }
         public string InstructorAccountStatus { get; set; }
         public DateTime RegistrationDate { get; set; }
-
-        public string Courses { get; set; }
-        public string CourseSections { get; set; }
-        public string CourseChapters { get; set; }
-        public string CourseFeedbacks { get; set; }
-        public string CourseExams { get; set; }
-
     }
 }
