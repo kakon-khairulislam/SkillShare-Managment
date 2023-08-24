@@ -81,7 +81,7 @@ namespace SkillShare.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
             }
         }
-        [HttpGet]
+        /*[HttpGet]
         [Route("api/Instructor/GetInsByCourse/{id}")]
         public HttpResponseMessage GetInsByCourse(int id)
         {
@@ -94,6 +94,6 @@ namespace SkillShare.Controllers
             {
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
             }
-        }
+        }*/
     }
 }

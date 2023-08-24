@@ -78,6 +78,10 @@
     <Compile Include="Migrations\202308121712325_initIns.designer.cs">
       <DependentUpon>202308121712325_initIns.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202308130516507_InsTest.cs" />
+    <Compile Include="Migrations\202308130516507_InsTest.designer.cs">
+      <DependentUpon>202308130516507_InsTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202308121712325_initIns.resx">
       <DependentUpon>202308121712325_initIns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308130516507_InsTest.resx">
+      <DependentUpon>202308130516507_InsTest.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

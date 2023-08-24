@@ -115,3 +115,8 @@ A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\SkillShare\obj\Debug\Ski
 A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\SkillShare\obj\Debug\SkillShare.csproj.CopyComplete
 A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\SkillShare\obj\Debug\SkillShare.dll
 A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\SkillShare\obj\Debug\SkillShare.pdb
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\SkillShare\bin\DAL.dll
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\SkillShare\bin\AutoMapper.dll
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\SkillShare\bin\DAL.pdb
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\SkillShare\bin\DAL.dll.config
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\SkillShare\bin\AutoMapper.xml

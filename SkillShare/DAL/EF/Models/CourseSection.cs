@@ -23,8 +23,7 @@ namespace DAL.EF.Models
 
 
         public virtual Course Course { get; set; }
-        [ForeignKey("Instructor")]
-        public int InstructorId { get; set; }
+        
         public virtual Instructor Instructor { get; set; }
         public virtual ICollection<CourseSectionAndStudent> CourseSectionAndStudents { get; set; }
         public virtual ICollection<CourseSectionAssignment> CourseAssignments { get; set; }
