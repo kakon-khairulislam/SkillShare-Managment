@@ -11,18 +11,17 @@ namespace BLL.Services
 {
     public class AuthService
     {
-        public static TokenDTO Login(string Username, string Password)
+        public static TokenDTO Login(int id, string Password)
         {
-            var data = DataAccessFactory.AuthDataAccess().Auth(Username, Password);
+            var data = DataAccessFactory.AuthDataAccess().Auth(id, Password);
             if (data != null)
             {
                 var token = new Token();
-                token.Username = data.InstructorId;
+                token.InstructorID = data.InstructorId;
                 token.TokenKey = Guid.NewGuid().ToString();
                 token.CreatedAt = DateTime.Now;
                 token.ExpiredAt = null;
                 var tk = DataAccessFactory.TokenDataAccess().Create(token);
-
                 var ret = ConvertingClass<Token, TokenDTO>.Convert(tk);
 
                 return ret;
@@ -42,11 +41,11 @@ namespace BLL.Services
             }
             return false;
         }
-        public static bool CheckType(string token, string typ)
+        /*public static bool CheckType(string token, string typ)
         {
             var tk = (from t in DataAccessFactory.TokenDataAccess().GetALL()
                       where t.TokenKey.Equals(token)
-                      && t.User.type == typ
+                      && t.Instructor.type == typ
                       select t).SingleOrDefault();
 
             if (tk != null)
@@ -54,6 +53,6 @@ namespace BLL.Services
                 return true;
             }
             return false;
-        }
+        }*/
     }
 }

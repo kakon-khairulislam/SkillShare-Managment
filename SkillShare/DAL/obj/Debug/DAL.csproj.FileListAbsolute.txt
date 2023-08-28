@@ -29,3 +29,5 @@ A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrat
 A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.TokenEDITV2.resources
 A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.ExamUP.resources
 A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.Front.resources
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.TokenUp.resources
+A:\Dot Net\project_repo\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.TokenUpv2.resources

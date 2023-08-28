@@ -1,5 +1,6 @@
 ﻿using BLL.DTOs;
 using BLL.Services;
+using SkillShare.AuthFilters;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -33,10 +34,13 @@ namespace SkillShare.Controllers
         }
         [HttpGet]
         [Route("api/Instructor/GetIns/{id}")]
+        //[Logged]
         public HttpResponseMessage GetIns(int id)
         {
             try
             {
+                //var current_u = "";
+                //var authhead= Request.Headers.Authorization?.ToString();
                 var data = InstructorService.GetIns(id);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
@@ -127,7 +131,7 @@ namespace SkillShare.Controllers
         {
             try
             {
-                var token = AuthService.Login(lm.Username, lm.Password);
+                var token = AuthService.Login(lm.id, lm.Password);
                 if (token != null)
                 {
                     return Request.CreateResponse(HttpStatusCode.OK, token);
@@ -142,7 +146,6 @@ namespace SkillShare.Controllers
             {
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
             }
-
         }
 
         //F3
@@ -198,7 +201,7 @@ namespace SkillShare.Controllers
 
         //F6
         [HttpPost]
-        [Route("image/upload/{id}")]
+        [Route("image/Instructor/upload/{id}")]
         public HttpResponseMessage Upload_Tourist_Profile_Image(int id)
         {
             try
@@ -264,7 +267,7 @@ namespace SkillShare.Controllers
 
         //F7
         /*[HttpGet]
-        [Route("image/{id}")]
+        [Route("/instructor/image/{id}")]
         public HttpResponseMessage Get_Tourist_Profile_Image(int id)
         {
             try
