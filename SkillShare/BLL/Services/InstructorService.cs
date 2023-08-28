@@ -61,9 +61,14 @@ namespace BLL.Services
             var insDTO = mapper.Map<List<InstructorDTO>>(data);
             return insDTO;
         }
-        /*public static List<InstructorDTO> GetALLInsByCourse(int id)
+
+        //Feature API
+        public static List<InstructorDTO> GetALLInsByCourse(int id)
         {
-            var data = DataAccessFactory.InstructorDataAccess().GetALL().Where(x => x.CourseId == id).ToList();
+            var data = (from ins in DataAccessFactory.InstructorDataAccess().GetALL()
+                        join c in DataAccessFactory.CourseDataAccess().GetALL() on ins.InstructorId equals c.InstructorId
+                        where c.CourseId == id
+                        select ins).ToList();
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Instructor, InstructorDTO>();
@@ -71,6 +76,22 @@ namespace BLL.Services
             var mapper = new Mapper(config);
             var insDTO = mapper.Map<List<InstructorDTO>>(data);
             return insDTO;
-        }*/
+        }
+        public static int GetNumberOfSudentInCourse(int id)
+        {
+            var data= DataAccessFactory.CourseSectionAndStudentDataAccess().GetALL().Where(item=> item.CourseSection.Course.InstructorId==id).ToList();
+            var dump = data.Count();
+            return dump;
+        }
+        public static List<CourseFeedbackDTO> GetCourseFeedback(int id)
+        {
+            var data = (from ins in DataAccessFactory.InstructorDataAccess().GetALL()
+                        join c in DataAccessFactory.CourseDataAccess().GetALL() on ins.InstructorId equals c.InstructorId
+                        join cs in DataAccessFactory.CourseFeedbackDataAccess().GetALL() on c.CourseId equals cs.CourseId
+                        where c.CourseId == id
+                        select cs).ToList();
+            var ret = ConvertingClass<CourseFeedback, CourseFeedbackDTO>.Convert(data).ToList();
+            return ret;
+        }
     }
 }
