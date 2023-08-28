@@ -13,7 +13,6 @@ namespace BLL.Services
     {
         public static TokenDTO Login(string Username, string Password)
         {
-            var dat = DataAccessFactory.InstructorDataAccess().GetALL();
             var data = DataAccessFactory.AuthDataAccess().Auth(Username, Password);
             if (data != null)
             {

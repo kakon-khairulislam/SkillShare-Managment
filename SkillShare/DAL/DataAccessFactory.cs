@@ -47,5 +47,17 @@ namespace DAL
         {
             return new CourseFeedBackRepo();
         }
+        public static IRepo<CourseExam, int, bool> CourseExamDataAccess()
+        {
+            return new CourseExamRepo();
+        }
+        public static IRepo<CourseExamAndStudent, int, bool> CourseExamAndStudentDataAccess()
+        {
+            return new CourseExamAndStudentRepo();
+        }
+        public static I_Image<Instructor, byte[], string, bool> InstructorImageDataAccess()
+        {
+            return new InstructorRepo();
+        }
     }
 }
