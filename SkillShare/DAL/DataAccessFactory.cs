@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,6 +49,14 @@ namespace DAL
         public static IAuth<User> AuthDataAccess()
         {
             return new UserRepo();
+        }
+        public static IRepo<CourseChapter, int, bool> CourseChapterDataAccess()
+        {
+            return new CourseChapterRepo();
+        }
+        public static IRepo<CourseChapterAndStudent,int, bool> CourseChapterAndStudentDataAccess()
+        {
+            return new CourseChapterAndStudentRepo();
         }
     }
 }

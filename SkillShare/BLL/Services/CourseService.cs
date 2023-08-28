@@ -116,6 +116,48 @@ namespace BLL.Services
             return ConvertingClass<Course,CourseDTO>.Convert(DataAccessFactory.CourseDataAccess().GetALL().Where(item => item.Tag.Contains(tag) && item.Difficulty.Contains(difficulty)).ToList());
         }
 
-        
+        public static bool RemoveStudentFromCourse(List<StudentDTO> studentsDTO)
+        {
+            var students = ConvertingClass<StudentDTO, Student>.Convert(studentsDTO);
+            foreach (var student in students)
+            {
+                if (!(DataAccessFactory.CourseSectionAndStudentDataAccess().Delete(student.StudentId)))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public static bool AddCourseChapter(List<CourseChapterDTO> courseChapters)
+        {
+            foreach(var course in courseChapters)
+            {
+                if (!DataAccessFactory.CourseChapterDataAccess().Create(ConvertingClass<CourseChapterDTO,CourseChapter>.Convert(course)))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public static bool AddCourseChapterAndStudent(List<CourseChapterAndStudentDTO> courseChapters)
+        {
+            foreach (var course in courseChapters)
+            {
+                if (!DataAccessFactory.CourseChapterAndStudentDataAccess().Create(ConvertingClass<CourseChapterAndStudentDTO, CourseChapterAndStudent>.Convert(course)))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public static bool CourseStatusOfStudent(CourseDTO courseDTO, int id)
+        {
+            var data = DataAccessFactory.CourseChapterAndStudentDataAccess().GetALL().Where(item => item.CourseChapter.CourseId == courseDTO.CourseId && item.StudentId == id && item.CourseChapterStudentProgression == "Finished").Count();
+            var comp = DataAccessFactory.CourseChapterDataAccess().GetALL().Where(item=>item.CourseId == courseDTO.CourseId).Count();
+            return data == comp;
+        }
     }
 }

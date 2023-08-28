@@ -73,7 +73,7 @@ namespace SkillShare.Controllers
             {
                 var data = CourseService.GetAll().Where(item => item.CourseStauts == "Enable");
                 return Request.CreateResponse(HttpStatusCode.OK, data);
-            }catch(Exception e) { return Request.CreateResponse(HttpStatusCode.BadRequest, new { Msg = "Bad Requesrt" }); }
+            }catch(Exception e) { return Request.CreateResponse(HttpStatusCode.BadRequest, e.Message); }
         }
 
         [HttpPost]
@@ -143,6 +143,21 @@ namespace SkillShare.Controllers
         }
 
         [HttpPost]
+        [Route("api/CourseSection/DeleteStudents")]
+        public HttpResponseMessage DeleteStudentsAtSection(List<StudentDTO> students)
+        {
+            try
+            {
+                if (CourseService.RemoveStudentFromCourse(students))
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, new { MSG = "Students Deleted" });
+                }
+                return Request.CreateResponse(HttpStatusCode.NotFound, new { MSG = "Some Students are not deleted" });
+            }
+            catch (Exception ex) { return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message); }
+        }
+
+        [HttpPost]
         [Route("api/Course/StudentsInCourse/{id}")]
         public HttpResponseMessage StudentsInCourse(int id)
         {
@@ -172,6 +187,50 @@ namespace SkillShare.Controllers
             {
                 var data = CourseService.CourseByTagAndDifficuly(tag, diff);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception e) { return Request.CreateResponse(HttpStatusCode.BadRequest, e.Message); }
+        }
+
+        [HttpPost]
+        [Route("api/Course/AddCourseChapters")]
+        public HttpResponseMessage AddCourseChapters(List<CourseChapterDTO>courseChapterDTO)
+        {
+            try
+            {
+                if (CourseService.AddCourseChapter(courseChapterDTO))
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, new { msg = "successfull" });
+                }
+                return Request.CreateResponse(HttpStatusCode.NotFound, new { msg = "unsuccessfull" });
+            }catch(Exception e) { return Request.CreateResponse(HttpStatusCode.BadRequest, e.Message); }
+        }
+
+        [HttpPost]
+        [Route("api/Course/AddCourseChapterAndStudents")]
+        public HttpResponseMessage AddCourseChapterAndStudents(List<CourseChapterAndStudentDTO> courseChapterDTO)
+        {
+            try
+            {
+                if (CourseService.AddCourseChapterAndStudent(courseChapterDTO))
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, new { msg = "successfull" });
+                }
+                return Request.CreateResponse(HttpStatusCode.NotFound, new { msg = "unsuccessfull" });
+            }
+            catch (Exception e) { return Request.CreateResponse(HttpStatusCode.BadRequest, e.Message); }
+        }
+
+        [HttpPost]
+        [Route("api/Course/CourseStatusOfStudent/{id}")]
+        public HttpResponseMessage CourseStatusOfStudent(CourseDTO courseDTO, int id)
+        {
+            try
+            {
+                if (CourseService.CourseStatusOfStudent(courseDTO, id))
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, new { msg = "Student Completed it" });
+                }
+                return Request.CreateResponse(HttpStatusCode.NotFound, new { msg = "Uncomplete" });
             }
             catch (Exception e) { return Request.CreateResponse(HttpStatusCode.BadRequest, e.Message); }
         }
