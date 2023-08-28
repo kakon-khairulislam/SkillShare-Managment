@@ -9,6 +9,6 @@ namespace DAL.Interface
 {
     public interface IAuth<CLASS>
     {
-        CLASS Auth(string name, string password);
+        CLASS Auth(int id, string password);
     }
 }

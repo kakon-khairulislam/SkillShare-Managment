@@ -1,0 +1,47 @@
+<html data-bs-theme="dark">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+			var app = angular.module("my-app",[]);
+			
+			app.controller("news-ctrl",function($scope,$http){
+				$http.get("https://localhost:44310/api/Instructor/GetIns/1").then(function(resp){
+					$scope.obj = resp.data;
+				},function(err){});
+			});
+			
+		</script>
+	</head>
+	<body ng-app="my-app">
+		<div></div>
+		
+		<div class="container mt-3" ng-controller="news-ctrl">
+            <table class="table" data-bs-theme="dark">
+                <thead>
+                    <th>Instructor ID</th>
+                    <th>Instructor Name</th>
+                    <th>Instructor Email</th>
+                    <th>Instructor Password</th>
+                    <th>Instructor Phone Number</th>
+                    <th>Instructor Status</th>
+                    <th>Instructor Account Status</th>
+                    <th>Registration Date</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{obj.InstructorId}}</td>
+                        <td>{{obj.InstructorName}}</td>
+                        <td>{{obj.InstructorEmail}}</td>
+                        <td>{{obj.InstructorPassword}}</td>
+                        <td>{{obj.InstructorPhoneNumber}}</td>
+                        <td>{{obj.InstructorStatus}}</td>
+                        <td>{{obj.InstructorAccountStatus}}</td>
+                        <td>{{obj.RegistrationDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+		</div>
+	</body>
+</html>

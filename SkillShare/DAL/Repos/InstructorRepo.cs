@@ -11,11 +11,12 @@ namespace DAL.Repos
 {
     internal class InstructorRepo : Repo, IRepo<Instructor, int, bool>, IAuth<Instructor>, I_Image<Instructor, byte[], string, bool>
     {
-        public Instructor Auth(string name, string password)
+        public Instructor Auth(int id, string password)
         {
             var data = from u in db.Instructors
-                       where u.InstructorEmail == name && u.InstructorPassword == password && u.InstructorAccountStatus == "Active"
+                       where u.InstructorId.Equals(id) && u.InstructorPassword.Equals(password) && u.InstructorAccountStatus == "Active"
                        select u;
+            
             return data.SingleOrDefault();
         }
 
