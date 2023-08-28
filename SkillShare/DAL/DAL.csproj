@@ -72,6 +72,7 @@
     <Compile Include="EF\SkillShareContext.cs" />
     <Compile Include="Interface\IAuth.cs" />
     <Compile Include="Interface\IRepo.cs" />
+    <Compile Include="Interface\I_Image.cs" />
     <Compile Include="Migrations\202308100622573_InitDBIns.cs" />
     <Compile Include="Migrations\202308100622573_InitDBIns.designer.cs">
       <DependentUpon>202308100622573_InitDBIns.cs</DependentUpon>
@@ -91,6 +92,10 @@
     <Compile Include="Migrations\202308281657309_ExamUP.cs" />
     <Compile Include="Migrations\202308281657309_ExamUP.designer.cs">
       <DependentUpon>202308281657309_ExamUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308281845435_Front.cs" />
+    <Compile Include="Migrations\202308281845435_Front.designer.cs">
+      <DependentUpon>202308281845435_Front.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
@@ -147,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202308281657309_ExamUP.resx">
       <DependentUpon>202308281657309_ExamUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308281845435_Front.resx">
+      <DependentUpon>202308281845435_Front.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
