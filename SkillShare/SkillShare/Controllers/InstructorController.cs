@@ -10,9 +10,11 @@ using System.Net.Http.Headers;
 using System.Web;
 using System.Web.ApplicationServices;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace SkillShare.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class InstructorController : ApiController
     {
         [HttpPost]
@@ -261,7 +263,7 @@ namespace SkillShare.Controllers
 
 
         //F7
-        [HttpGet]
+        /*[HttpGet]
         [Route("image/{id}")]
         public HttpResponseMessage Get_Tourist_Profile_Image(int id)
         {
@@ -309,7 +311,7 @@ namespace SkillShare.Controllers
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, ex.Message);
             }
-        }
+        }*/
 
         private string GetImageContentType(byte[] image)
         {
