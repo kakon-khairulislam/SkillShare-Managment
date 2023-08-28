@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace DAL.Interface
 {
-    public interface IAuth
+    public interface IAuth<USER>
     {
-        //User Auth(string name, string password);
+        USER Auth(string name, string password);
     }
 }

@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script>
+			var app = angular.module("my-app",[]);
+			
+			app.controller("login-ctrl",function($scope,$http){
+				$scope.login = function(){
+					var obj ={
+								Username:$scope.uname,
+								Password:$scope.pass
+							};
+					$http.post("https://localhost:44310/api/login",obj).then(function(resp){
+						$scope.msg=resp.data.TokenKey;
+						$scope.color="green";
+					},
+					function(err){
+						$scope.msg=err.data.Msg;
+						$scope.color="red";;
+					});
+				};
+				
+			});
+			
+		</script>
+	</head>
+	<body ng-app="my-app">
+		<div ng-controller="login-ctrl">
+			<form ng-submit="login()">
+				<input type="text" ng-model="uname"/> </br>
+				<input type="password" ng-model="pass"/> </br>
+				<input type="submit">
+			</form>
+			<span style="color:{{color}}">{{msg}}</span>
+		</div>
+	</body>
+</html>

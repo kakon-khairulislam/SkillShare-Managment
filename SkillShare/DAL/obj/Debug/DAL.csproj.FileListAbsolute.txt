@@ -1,0 +1,17 @@
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\bin\Debug\DAL.dll.config
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\bin\Debug\DAL.dll
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\bin\Debug\DAL.pdb
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.CreateStudentCourseRelatedTables.resources
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.CreatedMoreCourseExamAssignmentFeedback.resources
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.AddedCourseSectionAndStudentGroup.resources
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.ModifiedCourse.resources
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.ModifiesCourseCourseSectionStudentStudentGroup.resources
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.csproj.CopyComplete
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.dll
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.pdb
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.AddStudentLimitAtStudentGroupTable.resources
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.AddTokenUser.resources
+H:\A Clone Project\SkillShare-Managment\SkillShare\DAL\obj\Debug\DAL.Migrations.modifiedusertable.resources

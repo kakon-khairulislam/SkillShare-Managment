@@ -11,10 +11,12 @@ namespace BLL.DTOs
         public int StudentGroupId { get; set; }
         
         public string StudentGroupName { get; set; }
-        
+
+        public int StudentLimit { get; set; }
+
         public string AllStudentStatus { get; set; }
         
-        public string GroupStatus { get; set; } = "Enable";
+        public string GroupStatus { get; set; }
         
         public DateTime GroupCreationDate { get; set; } = DateTime.Now.Date;
     }

@@ -1,4 +1,5 @@
 ﻿using DAL.EF.Models;
+using DAL.Interface;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;

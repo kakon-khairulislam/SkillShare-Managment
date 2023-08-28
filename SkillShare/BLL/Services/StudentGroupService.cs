@@ -1,4 +1,5 @@
-﻿using BLL.DTOs;
+﻿using AutoMapper.Internal;
+using BLL.DTOs;
 using DAL;
 using DAL.EF.Models;
 using System;
@@ -30,6 +31,32 @@ namespace BLL.Services
         public static List<StudentGroupDTO> GetEnableStudentGroups()
         {
             return GetAllStudentGroups().Where(s => s.GroupStatus == "Enable").ToList();
+        }
+        public static String AllStudentsPresence(int id)
+        {
+            return GetAllStudentGroups().Where(item=>item.StudentGroupId == id && item.AllStudentStatus == "Logged in").ToList().Count()>0? "Everyone Present": "Not Everyone Present";
+        }
+        public static List<StudentDTO> StudentsOfGroupById(int id)
+        {
+            var StudentList = new List<StudentDTO>();
+            var cmp = DataAccessFactory.StudentAndStudentGroupDataAccess().GetALL().Where(item => item.StudentGroup.StudentGroupId == id);
+            foreach (var student in DataAccessFactory.StudentDataAccess().GetALL())
+            {
+                foreach(var c in cmp)
+                {
+                    if(c.StudentId == student.StudentId) 
+                    { 
+                        StudentList.Add(ConvertingClass<Student,StudentDTO>.Convert(student));
+                        cmp = cmp.Where(item => item.StudentId != c.StudentId);
+                        break; 
+                    }
+                }
+            }
+            return StudentList;
+        }
+        public static List<StudentGroupDTO> GetStudentGroupsByName(string name)
+        {
+            return GetAllStudentGroups().Where(item=>item.StudentGroupName.Equals(name)).ToList();
         }
     }
 }

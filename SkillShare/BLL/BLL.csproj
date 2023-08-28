@@ -44,11 +44,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\CourseDTO.cs" />
+    <Compile Include="DTOs\CourseSectionAndStudentDTO.cs" />
+    <Compile Include="DTOs\CourseSectionDTO.cs" />
+    <Compile Include="DTOs\StudentAndStudentGroupDTO.cs" />
+    <Compile Include="DTOs\StudentAndStudentGroupDTOWithRel.cs" />
     <Compile Include="DTOs\StudentDTO.cs" />
+    <Compile Include="DTOs\StudentDTOWithRel.cs" />
     <Compile Include="DTOs\StudentGroupDTO.cs" />
+    <Compile Include="DTOs\StudentGroupDTOWithRel.cs" />
+    <Compile Include="DTOs\TokenDTO.cs" />
+    <Compile Include="DTOs\UserDTO.cs" />
+    <Compile Include="LoginModel.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\ConvertingClass.cs" />
+    <Compile Include="Services\CourseService.cs" />
+    <Compile Include="Services\StudentAndStudentGroupService.cs" />
     <Compile Include="Services\StudentGroupService.cs" />
     <Compile Include="Services\StudentService.cs" />
   </ItemGroup>
@@ -59,13 +72,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="obj\Debug\BLL.csproj.AssemblyReference.cache" />
-    <None Include="obj\Debug\BLL.csproj.CoreCompileInputs.cache" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="obj\Debug\BLL.csproj.FileListAbsolute.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\" />

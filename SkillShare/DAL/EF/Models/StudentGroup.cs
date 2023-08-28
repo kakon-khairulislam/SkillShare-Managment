@@ -15,6 +15,8 @@ namespace DAL.EF.Models
         [Required] 
         public string StudentGroupName { get; set; }
         [Required]
+        public int StudentLimit { get; set;}
+        [Required]
         public string AllStudentStatus { get; set; }
         [Required]
         public string GroupStatus { get; set; } = "Enable";

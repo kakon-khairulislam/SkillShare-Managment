@@ -1,0 +1,13 @@
+H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\bin\Debug\BLL.dll
+H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\bin\Debug\BLL.pdb
+H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\bin\Debug\AutoMapper.dll
+H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\bin\Debug\DAL.dll
+H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\bin\Debug\EntityFramework.dll
+H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\bin\Debug\DAL.pdb
+H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\bin\Debug\DAL.dll.config
+H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\bin\Debug\AutoMapper.xml
+H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\obj\Debug\BLL.csproj.CopyComplete
+H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\obj\Debug\BLL.dll
+H:\A Clone Project\SkillShare-Managment\SkillShare\BLL\obj\Debug\BLL.pdb

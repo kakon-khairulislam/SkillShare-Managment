@@ -16,9 +16,9 @@ namespace DAL.EF.Models
         [Required]
         public string CourseSectionName { get; set; }
         [Required]
-        public int? CourseSectionStudentLimit { get; set; } = 0;
-        public int? MinimumStudentLimitGroup { get; set; } = 0;
-        public int? MaximumStudentLimitGroup { get; set; } = 0;
+        public int? CourseSectionStudentLimit { get; set; }
+        public int? MinimumStudentLimitGroup { get; set; }
+        public int? MaximumStudentLimitGroup { get; set; }
         [Required]
         public string CourseSectionStatus { get; set; } = "Enable";
         [ForeignKey("Course")]
