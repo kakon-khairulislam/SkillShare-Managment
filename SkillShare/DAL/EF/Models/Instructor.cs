@@ -19,6 +19,8 @@ namespace DAL.EF.Models
         public string InstructorAccountStatus { get; set; }
         public DateTime RegistrationDate { get; set; } 
 
+        public string Image { get; set; }
+
         public virtual ICollection<Course> Courses { get; set; }
         public virtual ICollection<CourseSection> CourseSections { get; set; }
         public virtual ICollection<CourseChapter> CourseChapters { get; set; }

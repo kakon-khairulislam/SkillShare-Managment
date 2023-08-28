@@ -50,6 +50,19 @@ namespace BLL.Services
             var insDTO = mapper.Map<InstructorDTO>(data);
             return insDTO;
         }
+
+        public static int GetInsID(int id)
+        {
+            var data = DataAccessFactory.InstructorDataAccess().Get(id);
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Instructor, InstructorDTO>();
+            });
+            var mapper = new Mapper(config);
+            var insDTO = mapper.Map<InstructorDTO>(data);
+            var insID= insDTO.InstructorId;
+            return insID;
+        }
         public static List<InstructorDTO> GetALLIns()
         {
             var data = DataAccessFactory.InstructorDataAccess().GetALL();
@@ -92,6 +105,80 @@ namespace BLL.Services
                         select cs).ToList();
             var ret = ConvertingClass<CourseFeedback, CourseFeedbackDTO>.Convert(data).ToList();
             return ret;
+        }
+        public static List<CourseFeedbackDTO> GetCourseFeedbackByIns(int id)
+        {
+            var data = (from ins in DataAccessFactory.InstructorDataAccess().GetALL()
+                        join c in DataAccessFactory.CourseDataAccess().GetALL() on ins.InstructorId equals c.InstructorId
+                        join cs in DataAccessFactory.CourseFeedbackDataAccess().GetALL() on c.CourseId equals cs.CourseId
+                        where ins.InstructorId == id
+                        select cs).ToList();
+            var ret = ConvertingClass<CourseFeedback, CourseFeedbackDTO>.Convert(data).ToList();
+            return ret;
+        }
+        public static double? AverageGradeByIns(int id)
+        {
+            var data = (from ins in DataAccessFactory.InstructorDataAccess().GetALL()
+                        join c in DataAccessFactory.CourseExamDataAccess().GetALL() on ins.InstructorId equals c.InstructorId
+                        join cs in DataAccessFactory.CourseExamAndStudentDataAccess().GetALL() on c.CourseExamId equals cs.CourseExamId
+                        where ins.InstructorId == id
+                        select cs.Grade).ToList();
+            var ret = data.Average();
+            return ret;
+        }
+
+        public static bool UploadImg(byte[] image, string imageName, int ID)
+        {
+            try
+            {
+                var data= DataAccessFactory.InstructorDataAccess().Get(ID);
+                if (data != null)
+                {
+                    var ct= DateTime.Now;
+                    var F_imgname=(ct.ToString("yyyyMMddHHmmss") + imageName);
+                    data.Image = F_imgname;
+                    var des=DataAccessFactory.InstructorDataAccess().Update(data);
+                    if(des)
+                    {
+                        var up_des = DataAccessFactory.InstructorImageDataAccess().Upload_Image(image, F_imgname);
+                        if (up_des)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                }
+                else
+                {
+                    return false;
+                }  
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public static byte[] Get_Image(int InsID)
+        {
+            var data = DataAccessFactory.InstructorDataAccess().Get(InsID);
+            var imageName = data.Image.ToString();
+            if (data != null)
+            {
+                return DataAccessFactory.InstructorImageDataAccess().Get_Image(imageName);
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

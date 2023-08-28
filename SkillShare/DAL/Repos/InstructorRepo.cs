@@ -2,13 +2,14 @@
 using DAL.Interface;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    internal class InstructorRepo : Repo, IRepo<Instructor, int, bool>, IAuth<Instructor>
+    internal class InstructorRepo : Repo, IRepo<Instructor, int, bool>, IAuth<Instructor>, I_Image<Instructor, byte[], string, bool>
     {
         public Instructor Auth(string name, string password)
         {
@@ -43,6 +44,11 @@ namespace DAL.Repos
             return db.Instructors.Where(s => s.InstructorStatus != "Deleted").ToList();
         }
 
+        public byte[] Get_Image(string imageName)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Update(Instructor obj)
         {
             var ins= Get(obj.InstructorId);
@@ -54,6 +60,52 @@ namespace DAL.Repos
             ins.InstructorAccountStatus = obj.InstructorAccountStatus;
             ins.RegistrationDate = obj.RegistrationDate;
             return db.SaveChanges() > 0;
+        }
+
+        private string SanitizeFileName(string fileName)
+        {
+            // Replace invalid characters with an underscore
+            foreach (char invalidChar in Path.GetInvalidFileNameChars())
+            {
+                fileName = fileName.Replace(invalidChar, '_');
+            }
+            return fileName;
+        }
+
+        public bool Upload_Image(byte[] image, string imageName)
+        {
+            try
+            {
+                string projectRoot = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "./DAL");
+                string folderPath = Path.Combine(projectRoot, "Uploads", "Tourists", "Profile_Image");
+
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+
+                // Remove or replace invalid characters from the imageName
+                string sanitizedImageName = SanitizeFileName(imageName);
+                string imagePath = Path.Combine(folderPath, sanitizedImageName);
+
+                using (FileStream fileStream = new FileStream(imagePath, FileMode.OpenOrCreate, FileAccess.Write))
+                {
+                    fileStream.Write(image, 0, image.Length);
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Print_in_Red(ex.Message);
+                return false;
+            }
+        }
+        public static void Print_in_Red(string text)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(text);
+            Console.ResetColor();
         }
     }
 }
