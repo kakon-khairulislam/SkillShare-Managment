@@ -61,9 +61,14 @@ namespace BLL.Services
             var data = DataAccessFactory.CourseDataAccess().Delete(id);
             return data;
         }
+
+        //Feature API
+
         public static List<CourseDTO> GetALLCourseByInstructor(int id)
         {
-            var data = DataAccessFactory.CourseDataAccess().GetALL().Where(x => x.InstructorId == id).ToList();
+            var data = (from cor in DataAccessFactory.CourseDataAccess().GetALL()
+                        where cor.InstructorId == id
+                        select cor).ToList();
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Course, CourseDTO>();
@@ -72,5 +77,8 @@ namespace BLL.Services
             var corDTO = mapper.Map<List<CourseDTO>>(data);
             return corDTO;
         }
+
+        
+
     }
 }

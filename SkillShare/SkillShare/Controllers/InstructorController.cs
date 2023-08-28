@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web.ApplicationServices;
 using System.Web.Http;
 
 namespace SkillShare.Controllers
@@ -81,13 +82,16 @@ namespace SkillShare.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
             }
         }
+
+        //Feature API
+
         [HttpGet]
         [Route("api/Instructor/GetInsByCourse/{id}")]
         public HttpResponseMessage GetInsByCourse(int id)
         {
             try
             {
-                var data = InstructorService.GetInsByCourse(id);
+                var data = InstructorService.GetALLInsByCourse(id);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
@@ -95,5 +99,58 @@ namespace SkillShare.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
             }
         }
+        [HttpGet]
+        [Route("api/Instructor/GetStudentbyIns/{id}")]
+        public HttpResponseMessage GetStudentbyIns(int id)
+        {
+            try
+            {
+                var data = InstructorService.GetNumberOfSudentInCourse(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+        }
+        [HttpGet]
+        [Route("api/Instructor/login")]
+        public HttpResponseMessage login(BLL.LoginModel lm)
+        {
+            try
+            {
+                var token = AuthService.Login(lm.Username, lm.Password);
+                if (token != null)
+                {
+                    return Request.CreateResponse(HttpStatusCode.OK, token);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.NotFound, new { Msg = "Username or password invalid" });
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+
+        }
+        [HttpGet]
+        [Route("api/Instructor/GetCourseFeedback/{id}")]
+        public HttpResponseMessage GetCourseFeedback(int id)
+        {
+            try
+            {
+                var data = InstructorService.GetCourseFeedback(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+
+        }
+
     }
 }

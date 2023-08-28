@@ -16,6 +16,6 @@ namespace BLL.DTOs
         public string InstructorPhoneNumber { get; set; }
         public string InstructorStatus { get; set; }
         public string InstructorAccountStatus { get; set; }
-        public DateTime RegistrationDate { get; set; }
+        public DateTime RegistrationDate { get; set; } = DateTime.Now;
     }
 }

@@ -81,6 +81,9 @@ namespace SkillShare.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
             }
         }
+
+        //Feature API
+
         [HttpGet]
         [Route("api/Course/GetCourseByInsId/{id}")]
         public HttpResponseMessage GetCourseByInsId(int id)

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "NbUk1eN1j+LDU+1I+JPc/Rc1On4Qi/RiRJe+7dNKePEJMNFv9hYeuJVzQIxVBH2g/C4GpGTg2XWpjKqB3sJQlA==",
+  "success": true,
+  "projectFilePath": "A:\\Dot Net\\project_repo\\SkillShare-Managment\\Expense Tracker\\DAL\\DAL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mohit\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\mohit\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\mohit\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\mohit\\.nuget\\packages\\mysqlconnector\\2.2.6\\mysqlconnector.2.2.6.nupkg.sha512",
+    "C:\\Users\\mohit\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "C:\\Users\\mohit\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\mohit\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

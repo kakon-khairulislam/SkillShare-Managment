@@ -19,5 +19,33 @@ namespace DAL
         {
             return new CourseRepo();
         }
+        public static IRepo<Student, int, bool> StudentDataAccess()
+        {
+                return new StudentRepo();
+        }
+        public static IRepo<StudentGroup, int, bool> StudentGroupDataAccess()
+        {
+                return new StudentGroupRepo();
+        }
+        public static IRepo<CourseSectionAndStudent, int, bool> CourseSectionAndStudentDataAccess()
+        {
+            return new CourseSectionAndStudentRepo();
+        }
+        public static IRepo<User, string, bool> UserDataAccess()
+        {
+            return new UserRepo();
+        }
+        public static IRepo<Token, int, Token> TokenDataAccess()
+        {
+            return new TokenRepo();
+        }
+        public static IAuth<Instructor> AuthDataAccess()
+        {
+            return new InstructorRepo();
+        }
+        public static IRepo<CourseFeedback , string, bool> CourseFeedbackDataAccess()
+        {
+            return new CourseFeedBackRepo();
+        }
     }
 }
